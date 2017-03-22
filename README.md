@@ -1,0 +1,2 @@
+# SimpleSAMLphp basic installation project
+

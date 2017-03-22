@@ -1,0 +1,15 @@
+{
+    "name": "sgomez/simplesamlphp-base",
+    "description": "SimpleSAMLphp base installation project",
+    "authors": [
+        {
+            "name": "Sergio Gómez",
+            "email": "sergio@uco.es"
+        }
+    ],
+    "type": "project",
+    "require": {
+        "simplesamlphp/simplesamlphp": "1.14.*"
+    },
+    "license": "LGPL-2.1"
+}
