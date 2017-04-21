@@ -56,3 +56,7 @@ composer.phar update
 You are free to install new simpleSAMLphp modules as usual without restore the
 _composer.json_ before updating, because you are using it as a library.
 
+## Enable or disable modules
+
+Because you shouldn't touch the vendor directory to enable or disable the simpleSAMLphp
+modules, you must use the 'module.enable' option in `config.php`.

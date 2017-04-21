@@ -1,6 +1,7 @@
 {
     "name": "sgomez/simplesamlphp-base",
     "description": "SimpleSAMLphp base installation project",
+    "license": "MIT",
     "authors": [
         {
             "name": "Sergio Gómez",
@@ -9,7 +10,15 @@
     ],
     "type": "project",
     "require": {
-        "simplesamlphp/simplesamlphp": "1.14.*"
+        "simplesamlphp/simplesamlphp": "1.14.*",
+        "sgomez/simplesamlphp-base-module-install": "^1.0",
+        "sgomez/simplesamlphp-scripts-base": "^1.0"
     },
-    "license": "LGPL-2.1"
+    "scripts": {
+        "base": [
+            "Sgomez\\SimpleSamlPhp\\Composer\\ScriptHandler::installModules"
+        ],
+        "post-update-cmd": "@base",
+        "post-install-cmd": "@base"
+    }
 }
