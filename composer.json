@@ -12,13 +12,17 @@
     "require": {
         "simplesamlphp/simplesamlphp": "1.14.*",
         "sgomez/simplesamlphp-base-module-install": "^1.0",
-        "sgomez/simplesamlphp-scripts-base": "^1.0"
+        "sgomez/simplesamlphp-scripts-base": "^1.1"
     },
     "scripts": {
-        "base": [
-            "Sgomez\\SimpleSamlPhp\\Composer\\ScriptHandler::installModules"
+        "post-package-install": [
+            "Sgomez\\SimpleSamlPhp\\Composer\\ScriptHandler::installModuleHook"
         ],
-        "post-update-cmd": "@base",
-        "post-install-cmd": "@base"
+        "post-package-update": [
+            "Sgomez\\SimpleSamlPhp\\Composer\\ScriptHandler::installModuleHook"
+        ],
+        "pre-package-uninstall": [
+            "Sgomez\\SimpleSamlPhp\\Composer\\ScriptHandler::uninstallModuleHook"
+        ]
     }
 }
